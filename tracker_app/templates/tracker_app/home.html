@@ -1,0 +1,41 @@
+{% extends 'tracker_app/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{%block content %}
+<script src="https://cdn.tailwindcss.com"></script>
+<section class="text-gray-600 body-font">
+  <div
+    class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
+  >
+    <div
+      class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+    >
+      <h1
+        class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
+      >
+        Fuel your body.
+        <span class="text-green-500 text-5xl block mt-2"
+          >Track your goals.</span
+        >
+      </h1>
+      <p class="mb-8 leading-relaxed text-lg">
+        Whether you're aiming to lose weight, build muscle, or simply eat more
+        mindfully, CalorieTrack helps you stay accountable and informed. Log
+        your daily intake, monitor your progress, and make smarter choices with
+        ease. Your journey to better health starts with awareness—and every
+        entry brings you one step closer to your goals.
+      </p>
+    </div>
+    {% load static %}
+    <div class="lg:max-w-xl lg:w-full md:w-1/2 w-5/6">
+      <img
+        src="{% static 'images/ctracker.png' %}"
+        alt="Calorie Tracker Hero"
+        class="rounded-xl shadow-2xl border-4 border-green-500 object-cover object-center transition-transform duration-500 hover:scale-105"
+      />
+    </div>
+  </div>
+</section>
+
+{% endblock %}
